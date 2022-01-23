@@ -1,0 +1,17 @@
+syntax="proto3";
+package proto;
+option go_package=".;proto";
+
+service BSCService{
+    rpc AccountBalance(ReqAccountBalance) returns(RespAccountBalance){}
+}
+
+message ReqAccountBalance{
+    string address=1;
+}
+
+message RespAccountBalance{
+    int32 code=1;
+    string message=2;
+    string result=3;
+}
