@@ -10,8 +10,7 @@ import (
 func main() {
 	server := micro.NewService(
 		micro.Name("debox.service.bsc"),
-		micro.Address(":8096"),
-		//micro.Registry(etcd.NewRegistry(registry.Addrs(":12379"))),
+		micro.Address(":8097"),
 	)
 	server.Init()
 	accountService := &service.AccountService{}
